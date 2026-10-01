@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#175CD3">
+  <title>Academy AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="loginPage" class="login-page">
+  <div class="login-card">
+
+    <div class="logo">A</div>
+
+    <span class="small-title">ACADEMY AI</span>
+
+    <h1>Ton professeur personnel.</h1>
+
+    <p>
+      Anglais, arabe et université dans une seule application.
+    </p>
+
+    <input id="nameInput" type="text" placeholder="Ton nom">
+
+    <input id="emailInput" type="email" placeholder="Adresse e-mail">
+
+    <input id="passwordInput" type="password" placeholder="Mot de passe">
+
+    <button class="primary" onclick="login()">
+      Se connecter
+    </button>
+
+    <button class="secondary" onclick="demoLogin()">
+      Mode démonstration
+    </button>
+
+  </div>
+</div>
+
+
+<div id="app" class="hidden">
+
+  <aside class="sidebar">
+
+    <div class="brand">
+      <div class="logo small">A</div>
+      <b>Academy AI</b>
+    </div>
+
+    <button onclick="showPage('home')">🏠 Accueil</button>
+
+    <button onclick="showPage('english')">
+      🇬🇧 Anglais
+    </button>
+
+    <button onclick="showPage('arabic')">
+      🇸🇦 Arabe
+    </button>
+
+    <button onclick="showPage('university')">
+      🎓 Université
+    </button>
+
+    <button onclick="showPage('progress')">
+      📊 Progression
+    </button>
+
+    <button onclick="showPage('ai')">
+      🤖 Professeur IA
+    </button>
+
+    <div class="bottom-menu">
+
+      <button onclick="showPage('profile')">
+        ⚙️ Mon espace
+      </button>
+
+      <button onclick="logout()">
+        🚪 Déconnexion
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <main>
+
+    <header>
+
+      <div>
+        <span class="small-title">ACADEMY AI</span>
+        <h3 id="pageTitle">Accueil</h3>
+      </div>
+
+      <div class="header-right">
+
+        <button onclick="toggleDark()">
+          🌙
+        </button>
+
+        <div id="avatar" class="avatar">
+          S
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <section id="content"></section>
+
+  </main>
+
+</div>
+
+
+<div id="toast"></div>
+
+<script src="app.js"></script>
+
+</body>
+  </html>
